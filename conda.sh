@@ -1,0 +1,1 @@
+/Users/hitesh/miniconda3/etc/profile.d/conda.sh
