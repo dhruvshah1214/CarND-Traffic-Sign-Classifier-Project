@@ -115,29 +115,29 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
- - The original LeNet, because it was simple and quick.
+  - The original LeNet, because it was simple and quick.
 
 * What were some problems with the initial architecture?
- - Not high enough accuracy.
+  - Not high enough accuracy.
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
- - I changed the architecture to the one described in the research paper provided in the notebook.
- - Overfitting was a huge problem. At one point, I was at a dropout probability of 0.1 before I came to my senses and said to myself, "Okay, this is crazy. I need to solve this another way."
- - And so I included L2 Regularization with the loss function, which helped a lot with overfitting.
+  - I changed the architecture to the one described in the research paper provided in the notebook.
+  - Overfitting was a huge problem. At one point, I was at a dropout probability of 0.1 before I came to my senses and said to myself, "Okay, this is crazy. I need to solve this another way."
+  - And so I included L2 Regularization with the loss function, which helped a lot with overfitting.
 
 * Which parameters were tuned? How were they adjusted and why?
- - The epoch count, batch size, and learning rate were adjusted based on iteration and experimentation. If a pass through was taking way too long, I increased the learning rate. But then it could stop converging with a high learning rate because it'd just skip over the minima, so sometimes I had to tune it down. The epoch count was kept low for quick debugging and testing iterations, but at the end I turned it up way high. The batch size was tuned based on knowledge of reading other sources and iteration similar to the learning rate.
+  - The epoch count, batch size, and learning rate were adjusted based on iteration and experimentation. If a pass through was taking way too long, I increased the learning rate. But then it could stop converging with a high learning rate because it'd just skip over the minima, so sometimes I had to tune it down. The epoch count was kept low for quick debugging and testing iterations, but at the end I turned it up way high. The batch size was tuned based on knowledge of reading other sources and iteration similar to the learning rate.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
- - Dropout layers and regularization are important to take out the specifics that a model generally tends to learn. It's important to remember that the purpose of a model is often to classify inputs it hasn't seen, so just slamming it with a load of unimportant features and turning up all the parameters doesn't really work. The model needs to generalize and interpolate well, not try to fit every single datapoint, because if it does, it'll catch even the slight outliers and try to adjust to them, inherently decreasing the accuracy of the model.
+  - Dropout layers and regularization are important to take out the specifics that a model generally tends to learn. It's important to remember that the purpose of a model is often to classify inputs it hasn't seen, so just slamming it with a load of unimportant features and turning up all the parameters doesn't really work. The model needs to generalize and interpolate well, not try to fit every single datapoint, because if it does, it'll catch even the slight outliers and try to adjust to them, inherently decreasing the accuracy of the model.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
- - The Sermanet/LeCunn modified LeNet architecture
+  - The Sermanet/LeCunn modified LeNet architecture
 * Why did you believe it would be relevant to the traffic sign application?
- - Udacity included a research paper showing off its high accuracies in traffic sign classification contests!
+  - Udacity included a research paper showing off its high accuracies in traffic sign classification contests!
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- - 94% is a pretty high accuracy rate for a test set.
+  - 94% is a pretty high accuracy rate for a test set.
 
 ### Test a Model on New Images
 
