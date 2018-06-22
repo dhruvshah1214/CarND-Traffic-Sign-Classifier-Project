@@ -81,27 +81,24 @@ My final model consisted of the following layers:
 | Layer         		      |     Description	        					                            | 
 |:---------------------:|:--------------------------------------------------------:| 
 | Input         		      | 32x32x1 image -> grayscaled & 0-mean normalized array   	| 
-
 | Convolution 5x5     	 | 1x1 stride, VALID padding, outputs 28x28x6 	             |
 | RELU					             |	outputs 28x28x6    								                              |
 | Max pooling	      	   | 2x2 stride,  outputs 14x14x6 				                        |
-
-LAYER 2
+|     <b>LAYER 2</b>    |                                                          |
 | Convolution 5x5     	 | 1x1 stride, VALID padding, outputs 10x10x6 	             |
 | RELU					             | outputs 10x10x6                              												|
 | Dropout					          | Keep probability: 0.5, outputs 10x10x6       												|
 | Max pooling	      	   | 2x2 stride,  outputs 5x5x6   				                        |
-
-LAYER 3
+|     <b>LAYER 3</b>    |                                                          |
 | Convolution 5x5     	 | 1x1 stride, VALID padding, outputs 1x1x400 	             |
 | RELU					             | outputs 1x1x400                              												|
 | Dropout					          | Keep probability: 0.5, outputs 1x1x400       												|
-
+|                       |                                                          |
 | FLATTEN LAYERS 2 + 3  | Layer 2: 400, Layer 3: 400, outputs 400 + 400 = 800      |
 | Dropout					          | Keep probability: 0.5, outputs 1x1x400       												|
-
+|                       |                                                          |
 | Fully connected		     | 800 -> 43        									                               |
-
+|                       |                                                          |
 | Softmax				           | softmax cross entropy                                    |
  
 
